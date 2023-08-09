@@ -1,20 +1,24 @@
-    <p>cadastro works!</p>
-
+<ion-app>
+    <header>
+      <div class="cabecalho">
+          <ion-img class="img-logo"src="assets/image/logo.png"alt="Logo"></ion-img>
+          <ion-title class="titulo-principal">MedTempo</ion-title>
+        </div>
+    </header>
 
     <!-- Página de cadastro -->
-
     <!-- Por favor estilizem isso -->
-
 
     <div>
         <input type="button" value="Usuário Pessoal" (click)="usr_type = 1">
         <input type="button" value="Usuário Especialista" (click)="usr_type = 2">
+        <!--ARRUMAR O FAMILHAR PARA FAMILIAR-->
         <input type="button" value="Usuário Familhar" (click)="usr_type = 3">
     </div>
 
 
     <form *ngIf="usr_type == 1" #event="ngForm" (ngSubmit)="Create(event, 'user-pessoal')">
-        <p>Usuário Pessoal</p>
+        <p class="tiposperfil">Usuário Pessoal</p>
         <input type="text" ngModel name="nome" placeholder="insira nome" required>
         <input type="text" ngModel name="sobrenome" placeholder="insira sobrenome" required>
     
@@ -62,7 +66,7 @@
 
 
     <form *ngIf="usr_type == 3" #event="ngForm" (ngSubmit)="Create(event, 'user-familhar')">
-        <p>Usuário Familhar</p>
+        <p>Usuário Familiar</p>
         <input type="text" ngModel name="nome" placeholder="insira nome" required>
         <input type="text" ngModel name="sobrenome" placeholder="insira sobrenome" required>
     
@@ -109,3 +113,4 @@
         <hr>
     
     </div>
+</ion-app>
