@@ -9,11 +9,15 @@
     <!-- Página de cadastro -->
     <!-- Por favor estilizem isso -->
 
-    <div>
-        <input type="button" value="Usuário Pessoal" (click)="usr_type = 1">
-        <input type="button" value="Usuário Especialista" (click)="usr_type = 2">
+    <div class="flex">
+    <h1 class="text-tipoCadstro">Selecione seu tipo de cadastro!</h1>
+    <ion-icon name="medkit-outline"></ion-icon>
+        <input class="input-tipoCadastroTC texto-principalTC" type="button" value="Usuário Pessoal" (click)="usr_type = 1">
+    <ion-icon name="people-outline"></ion-icon>
+        <input class="input-tipoCadastroTC texto-principalTC" type="button" value="Usuário Especialista" (click)="usr_type = 2">
         <!--ARRUMAR O FAMILHAR PARA FAMILIAR-->
-        <input type="button" value="Usuário Familhar" (click)="usr_type = 3">
+    <ion-icon name="person-outline"></ion-icon>
+        <input class="input-tipoCadastroTC texto-principalTC" type="button" value="Usuário Familhar" (click)="usr_type = 3">
     </div>
 
 
@@ -83,7 +87,7 @@
     
         <input type="date" ngModel name="data_nascimento" placeholder="insira data de nascimento"
         required>
-        <input type="submit" value="cadastrar usuário">
+        <input  type="submit" value="cadastrar usuário">
     </form>
     
     

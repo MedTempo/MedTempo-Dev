@@ -36,6 +36,7 @@
     "@angular/compiler-cli": "^16.1.0",
     "@capacitor/cli": "5.1.1",
     "@ionic/angular-toolkit": "latest",
+    "@ionic/lab": "3.2.15",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",

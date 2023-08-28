@@ -6,16 +6,27 @@
       </div>
   </header>
 
-  <h1 class="titulo">ENTRAR</h1>
+  <ion-segment value="Entrar">
+    <ion-segment-button class="segment-entrar" value="Entrar">
+      <ion-label>Entrar</ion-label>
+    </ion-segment-button>
+    <ion-segment-button class="segment-cadastrar" value="Cadastrar">
+      <ion-label>Cadastrar</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-item-divider></ion-item-divider>
 
 <form #event="ngForm" (ngSubmit)="Login(event)">
+
+  <h1 class="text-tipo">Selecione o tipo de login:</h1>
   <select ngModel name="user_type" required>
     <option selected [value]="1">Usuario Pessoal</option>
     <option [value]="2">Médico</option>
     <option [value]="3">Família</option>
   </select>
 
-<ion-input
+<ion-input class="input-entrar"
     name="email"
     type="email"
     label="Email:" 
@@ -26,7 +37,7 @@
     required
 ></ion-input>
 
-  <ion-input
+  <ion-input class="input-senha"
     type="password"
     name="senha"
     label="Senha:" 
@@ -36,7 +47,12 @@
     ngModel
     required
   />
-  <input type="submit" value="cadastrar usuário" />
+
+
+
+  <ion-button class="button-esqueceu" fill="clear">Esqueceu sua senha?</ion-button>
+  <br>
+  <input class="button-entrar" type="submit" value="ENTRAR" />
 </form>
 
 </ion-app>

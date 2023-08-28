@@ -23,3 +23,39 @@ header{
     font-size: 25px;
     font-family: 'Plus Jakarta Sans';
 }
+
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.text-tipoCadstro{
+  margin: 5px;
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+.input-tipoCadastroTC{
+  margin: 5px;
+  border-width: medium;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #2D516C;
+  background-color: #fff;
+}
+
+.texto-principalTC{
+  font-family: 'Roboto';
+  font-size: 20px;
+}
+
+
+
+.button-cadstrar{
+  color: #fff;
+  background-color: #2D516C;
+  width: 100%;
+  height: 20%;
+  font-family: 'Plus Jakarta Sans';
+  align-items: center;
+}
