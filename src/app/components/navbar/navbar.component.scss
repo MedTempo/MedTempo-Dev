@@ -1,8 +1,8 @@
 
   //@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,700&display=swap');
-  .scroll-y{
-      background-color: #2D516C;
-    }
+    .scroll-y{
+        background-color: #2D516C;
+      }
     
     .cabecalho-menu{
         flex-direction: row;
@@ -40,7 +40,7 @@
         display: flex;
         flex-direction: row;
       }
-    
+
       ion-menu::part(backdrop) {
         background-color: #2D516C;
       }

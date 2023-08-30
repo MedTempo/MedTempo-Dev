@@ -10,24 +10,23 @@
   <ion-content [fullscreen]="true">
     <ion-segment [(ngModel)]="selectTabs">
       <ion-segment-button value="recent">
-        <ion-label>Título 1</ion-label>
+        <ion-label>Entrar</ion-label>
       </ion-segment-button>
 
       <ion-segment-button value="missed">
-        <ion-label>Título 2</ion-label>
+        <ion-label>Cadastro</ion-label>
       </ion-segment-button>
     </ion-segment>
 
     <div *ngIf="selectTabs =='recent'"> <!-- Div do conteúdo entrar -->
-      <h3>Conteúdo 1</h3>
-      
+      <h3 class="subtitulo">Faça login na sua conta:</h3>
 
       <form #event="ngForm" (ngSubmit)="Login(event)">
 
         <h1 class="text-tipo">Selecione o tipo de login:</h1>
         <select ngModel name="user_type" required>
-          <option selected [value]="1">Usuario Pessoal</option>
-          <option [value]="2">Médico</option>
+          <option selected [value]="1">Usuário Pessoal</option>
+          <option [value]="2">Especialista</option>
           <option [value]="3">Família</option>
         </select>
       
