@@ -12,22 +12,21 @@ ion-segment-button.md::part(native) {
   margin-top: 40px;
 }
 
-ion-app{
-  margin: 0%;
-}
 
 header{
   margin: 0 auto;
 }
 
 .subtitulo{
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Plus Jakarta Sans';
   text-align: center;
+  margin-top: 20px;
 }
 
-:host(.segment-button-checked){
-  color: black;
+.select{
+  margin-left: 12px;
+  font-size: 8px;
 }
 
 .img-logo{
@@ -46,12 +45,19 @@ header{
   font-family: 'Plus Jakarta Sans';
 }
 
+.opcoes{
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans';
+  margin-top: 10px;
+}
 
 .input-entrar{
+  margin: 0;
   margin-left: 15px;
+  margin-right: 5px;
   font-family: 'Roboto';
   color: black;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .input-senha{
@@ -80,5 +86,3 @@ header{
   font-family: 'Plus Jakarta Sans';
   font-size: 10px;
 }
-
-

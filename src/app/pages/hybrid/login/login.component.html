@@ -22,36 +22,39 @@
       <h3 class="subtitulo">Faça login na sua conta:</h3>
 
       <form #event="ngForm" (ngSubmit)="Login(event)">
+        <div class="selecao">
+          <ion-item class="opcoes">
+            <ion-select label="Selecione seu tipo de perfil:" label-placement="floating" ngModel name="user_type" required>
+              <ion-select-option selected [value]="1">Pessoal</ion-select-option>
+              <ion-select-option [value]="2">Especialista</ion-select-option>
+              <ion-select-option [value]="3">Família</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
 
-        <h1 class="text-tipo">Selecione o tipo de login:</h1>
-        <select ngModel name="user_type" required>
-          <option selected [value]="1">Usuário Pessoal</option>
-          <option [value]="2">Especialista</option>
-          <option [value]="3">Família</option>
-        </select>
-      
-        <ion-input class="input-entrar"
-            name="email"
-            type="email"
-            label="Email:" 
-            label-placement="floating"
-            placeholder="Insira o email"
+      <!--
+          <ion-input class="input-entrar"
+              name="email"
+              type="email"
+              label="Email:" 
+              label-placement="floating"
+              placeholder="Insira o email"
+              color="medium"
+              ngModel
+              required
+          ></ion-input>
+        
+          <ion-input class="input-senha"
+            type="password"
+            name="senha"
+            label="Senha:" 
+            label-placement="floating" 
+            placeholder="Insira a senha"
             color="medium"
             ngModel
             required
-        ></ion-input>
-      
-        <ion-input class="input-senha"
-          type="password"
-          name="senha"
-          label="Senha:" 
-          label-placement="floating" 
-          placeholder="Insira a senha"
-          color="medium"
-          ngModel
-          required
-        />
-
+          />
+      -->
       </form> 
     </div>
 

@@ -1,17 +1,23 @@
 
-  //@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,700&display=swap');
-    .scroll-y{
-        background-color: #2D516C;
-      }
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,800;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap'); 
     
     .cabecalho-menu{
         flex-direction: row;
         display:flex;
+        color: #ffffff;
+        background-color: #2D516C;
       }
     
       .menu{
         color: rgb(0, 0, 0);
       }
+
+      .title-menu{
+        text-align: left;
+        font-family: 'Roboto';
+      }
+
     
       .titulo-principal{
         color: #2D516C;
@@ -41,16 +47,6 @@
         flex-direction: row;
       }
 
-      ion-menu::part(backdrop) {
-        background-color: #2D516C;
-      }
-    
-      ion-menu::part(container) {
-        border-radius: 0 20px 20px 0;
-    
-        box-shadow: 4px 0px 16px #2D516C;
-      }
-    
       button-native{
         background-color: #2D516C;
       }
