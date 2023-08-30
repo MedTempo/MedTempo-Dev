@@ -10,6 +10,7 @@ import BackendConnectorService from 'src/app/services/backend-connector/backend-
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  selectTabs = 'recent'; //valor para a divisão do ion-segment
 
   usr
 

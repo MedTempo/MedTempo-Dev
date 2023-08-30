@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@800&display=swap');
 
 
+ion-segment-button::part(indicator-background) {
+  background: #FFC859;
+}
+
+ion-segment-button.md::part(native) {
+  color: #000;
+  font-family: 'Plus Jakarta Sans';
+}
+
+
 ion-app{
   margin: 0%;
 }
@@ -64,3 +74,4 @@ header{
   font-family: 'Plus Jakarta Sans';
   font-size: 10px;
 }
+

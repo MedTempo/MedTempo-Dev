@@ -6,53 +6,65 @@
       </div>
   </header>
 
-  <ion-segment value="Entrar">
-    <ion-segment-button class="segment-entrar" value="Entrar">
-      <ion-label>Entrar</ion-label>
-    </ion-segment-button>
-    <ion-segment-button class="segment-cadastrar" value="Cadastrar">
-      <ion-label>Cadastrar</ion-label>
-    </ion-segment-button>
-  </ion-segment>
 
-  <ion-item-divider></ion-item-divider>
+  <ion-content [fullscreen]="true">
+    <ion-segment [(ngModel)]="selectTabs">
+      <ion-segment-button value="recent">
+        <ion-label>Título 1</ion-label>
+      </ion-segment-button>
 
-<form #event="ngForm" (ngSubmit)="Login(event)">
+      <ion-segment-button value="missed">
+        <ion-label>Título 2</ion-label>
+      </ion-segment-button>
+    </ion-segment>
 
-  <h1 class="text-tipo">Selecione o tipo de login:</h1>
-  <select ngModel name="user_type" required>
-    <option selected [value]="1">Usuario Pessoal</option>
-    <option [value]="2">Médico</option>
-    <option [value]="3">Família</option>
-  </select>
+    <div *ngIf="selectTabs =='recent'"> <!-- Div do conteúdo entrar -->
+      <h3>Conteúdo 1</h3>
+      
 
-<ion-input class="input-entrar"
-    name="email"
-    type="email"
-    label="Email:" 
-    label-placement="floating"
-    placeholder="Insira o email"
-    color="medium"
-    ngModel
-    required
-></ion-input>
+      <form #event="ngForm" (ngSubmit)="Login(event)">
 
-  <ion-input class="input-senha"
-    type="password"
-    name="senha"
-    label="Senha:" 
-    label-placement="floating" 
-    placeholder="Insira a senha"
-    color="medium"
-    ngModel
-    required
-  />
+        <h1 class="text-tipo">Selecione o tipo de login:</h1>
+        <select ngModel name="user_type" required>
+          <option selected [value]="1">Usuario Pessoal</option>
+          <option [value]="2">Médico</option>
+          <option [value]="3">Família</option>
+        </select>
+      
+        <ion-input class="input-entrar"
+            name="email"
+            type="email"
+            label="Email:" 
+            label-placement="floating"
+            placeholder="Insira o email"
+            color="medium"
+            ngModel
+            required
+        ></ion-input>
+      
+        <ion-input class="input-senha"
+          type="password"
+          name="senha"
+          label="Senha:" 
+          label-placement="floating" 
+          placeholder="Insira a senha"
+          color="medium"
+          ngModel
+          required
+        />
+
+      </form> 
+    </div>
+
+    <div *ngIf="selectTabs =='missed'">
+      <h3>Conteúdo 2</h3>
+
+      
+    </div>
+
+  </ion-content>
 
 
 
-  <ion-button class="button-esqueceu" fill="clear">Esqueceu sua senha?</ion-button>
-  <br>
-  <input class="button-entrar" type="submit" value="ENTRAR" />
-</form>
 
 </ion-app>
