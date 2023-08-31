@@ -5,16 +5,16 @@
     .cabecalho-menu{
         flex-direction: row;
         display:flex;
-        color: #ffffff;
-        background-color: #2D516C;
+        color: #000;
+        font-family: 'Roboto';
       }
-    
+
       .menu{
         color: rgb(0, 0, 0);
       }
 
       .title-menu{
-        text-align: left;
+        text-align: center;
         font-family: 'Roboto';
       }
 
@@ -41,6 +41,12 @@
         margin-left: 20px;
         flex-direction: row;
       }
+
+      .Separador-menu{
+        color: #2D516C;
+        font-family: 'Roboto';
+        font-size: 20px;
+      }
     
       ion-title{
         display: flex;
@@ -50,3 +56,4 @@
       button-native{
         background-color: #2D516C;
       }
+

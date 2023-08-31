@@ -10,18 +10,20 @@ header{
 }
 
 .img-logo{
-  margin-top: 50px;
+  margin-top: 40px;
+  align-items: center;
+  justify-content: center;
   height: 7rem;
-  width: 10rem;
 }
 
 .titulo-principal{
   margin-top: 10px;
-    text-align: center;
-    color: #2D516C;
-    font-weight: bold;
-    font-size: 25px;
-    font-family: 'Plus Jakarta Sans';
+  text-align: center;
+  justify-content: center;
+  color: #2D516C;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Plus Jakarta Sans';
 }
 
 .flex{
