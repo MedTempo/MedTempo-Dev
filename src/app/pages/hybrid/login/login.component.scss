@@ -12,7 +12,6 @@ ion-segment-button.md::part(native) {
   margin-top: 40px;
 }
 
-
 header{
   margin: 0 auto;
 }
@@ -21,13 +20,8 @@ header{
   font-size: 20px;
   font-family: 'Plus Jakarta Sans';
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
   color: #2D516C;
-}
-
-.select{
-  margin-left: 12px;
-  font-size: 8px;
 }
 
 .img-logo{
@@ -51,23 +45,29 @@ header{
   font-family: 'Plus Jakarta Sans';
 }
 
+.caixa-selecao{
+  margin: 10px;  
+}
+
+.corpo-formulario{
+  margin: 25px;
+}
+
 .opcoes{
   font-size: 15px;
   font-family: 'Plus Jakarta Sans';
   margin-top: 10px;
+  margin-right: 15px;
 }
 
 .input-entrar{
   margin: 0;
-  margin-left: 15px;
-  margin-right: 5px;
   font-family: 'Roboto';
   color: black;
   font-size: 13px;
 }
 
 .input-senha{
-  margin-left: 15px;
   font-family: 'Roboto';
   color: black;
   font-size: 15px;
@@ -84,11 +84,18 @@ header{
   height: 20%;
   font-family: 'Plus Jakarta Sans';
   align-items: center;
+  border: none;
+  border-radius: 5px 5px;
+  padding: 8px;
+  margin-top: 20px;
 }
 
-.button-esqueceu{
-  color: black;
-  font-weight: bold;
-  font-family: 'Plus Jakarta Sans';
-  font-size: 10px;
+.botao-senha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.5px
 }

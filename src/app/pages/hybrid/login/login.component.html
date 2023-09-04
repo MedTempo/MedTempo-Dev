@@ -1,3 +1,5 @@
+
+
 <ion-app>
   <header>
     <div class="cabecalho">
@@ -22,7 +24,8 @@
       <h3 class="subtitulo">Faça login na sua conta:</h3>
 
       <form #event="ngForm" (ngSubmit)="Login(event)">
-        <div class="selecao">
+
+        <div class="caixa-selecao">
           <ion-item class="opcoes">
             <ion-select label="Selecione seu tipo de perfil:" label-placement="floating" ngModel name="user_type" required>
               <ion-select-option selected [value]="1">Pessoal</ion-select-option>
@@ -32,6 +35,7 @@
           </ion-item>
         </div>
 
+        <div class="corpo-formulario">
           <ion-input class="input-entrar"
               name="email"
               type="email"
@@ -44,21 +48,26 @@
           ></ion-input>
         
           <ion-input class="input-senha"
-            type="password"
-            name="senha"
-            label="Senha:" 
-            label-placement="floating" 
-            placeholder="Insira a senha"
-            color="medium"
-            ngModel
-            required
+              type="password"
+              name="senha"
+              label="Senha:" 
+              label-placement="floating" 
+              placeholder="Insira a senha"
+              color="medium"
+              ngModel
+              required
           />
+
+          <input class="button-entrar" type="submit" value="Entrar" />
+          <a href="/" class="botao-senha">Esqueceu sua senha?</a>
+        </div>
+
       </form> 
     </div>
 
     <div *ngIf="selectTabs =='missed'">
-      <h3>Conteúdo 2</h3>
-
+      <h3 class="subtitulo">Faça seu cadastro:</h3>
+      
       
     </div>
 

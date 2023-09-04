@@ -5,40 +5,28 @@ ion-app{
   margin: 0%;
 }
 
-header{
-  margin: 0 auto;
-}
-
-.img-logo{
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
-  height: 7rem;
-}
-
-.titulo-principal{
-  margin-top: 10px;
-  text-align: center;
-  justify-content: center;
-  color: #2D516C;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: 'Plus Jakarta Sans';
-}
-
 .flex{
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
-.text-tipoCadstro{
-  margin: 5px;
-  font-family: 'Roboto';
+h1{
+  display: flex;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans';
   font-size: 20px;
+  margin: 25px;
+  color: #2D516C;
 }
 
-.input-tipoCadastroTC{
-  margin: 5px;
+.subtitulo{
+  font-size: 15px;
+  font-family: 'Plus Jakarta Sans';
+}
+
+.usuario{
+  margin-top: 7px;
   border-width: medium;
   border-radius: 10px;
   border-style: solid;
@@ -46,18 +34,23 @@ header{
   background-color: #fff;
 }
 
-.texto-principalTC{
-  font-family: 'Roboto';
-  font-size: 20px;
-}
-
-
-
-.button-cadstrar{
-  color: #fff;
-  background-color: #2D516C;
-  width: 100%;
-  height: 20%;
-  font-family: 'Plus Jakarta Sans';
+.saiba-mais{
+  display: flex;
+  justify-content: center;
   align-items: center;
+  margin-top: 8px;
+  font-size: 14px;
+  letter-spacing: 0.5px
 }
+
+p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+
+
+
