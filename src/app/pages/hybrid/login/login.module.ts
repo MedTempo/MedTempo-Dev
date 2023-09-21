@@ -6,6 +6,9 @@ import { LoginComponent } from './login.component';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 
+//Importar o selector para integrar login e cadastro
+import { SelectorModule } from '../../../components/selector/selector.module'
+
 
 
 @NgModule({
@@ -16,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     LoginRoutingModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    SelectorModule
   ]
 })
 export class LoginModule { }

@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import BackendConnectorService from 'src/app/services/backend-connector/backend-connector.service';
 import { req_user_pessoal, usuario_pessoal } from 'src/interfaces/usuarios';
+import BackendConnectorService from 'src/app/services/backend-connector/backend-connector.service';
+import { NgForm } from '@angular/forms';
+
 
 import { Router } from '@angular/router';
 import usr_type from 'src/interfaces/usr_type';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.scss']
+  selector: 'app-selector',
+  templateUrl: './selector.component.html',
+  styleUrls: ['./selector.component.scss']
 })
-export class CadastroComponent implements OnInit {
+export class SelectorComponent implements OnInit {
 
   usr: usuario_pessoal
 
@@ -72,6 +73,7 @@ export class CadastroComponent implements OnInit {
     }
 
   }
+
 
   public async Delete(user: string){
     

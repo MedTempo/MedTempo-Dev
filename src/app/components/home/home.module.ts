@@ -9,6 +9,8 @@ import { NavbarModule } from '../navbar/navbar.module';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
+import { ClockComponent } from '../clock/clock.component';
+import { ClockModule } from '../clock/clock.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     RouterLink,
     RouterLinkActive,
     NgFor,
-    NgIf
+    NgIf,
+    ClockModule
   ]
 })
 export class HomeModule { }
