@@ -2,9 +2,9 @@
 
 rm -rf www/ android sdk
 
-npx ionic build;
+npx @ionic/cli build;
 
-npx ionic capacitor add android
+npx @ionic/cli capacitor add android
 
 cd android;
 
