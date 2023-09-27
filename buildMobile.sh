@@ -2,21 +2,21 @@
 
 rm -rf www/ android sdk
 
-npx @ionic/cli build;
+npx ionic build;
 
-npx @ionic/cli capacitor add android
+npx ionic capacitor add android
 
 cd android;
 
 ./gradlew 
 
-#mkdir sdk/;
-#sdkmanager "platforms;android-33" --sdk_root=sdk/
-#export ANDROID_HOME="../sdk/"
+mkdir sdk/;
+sdkmanager "platforms;android-33" --sdk_root=sdk/
+export ANDROID_HOME="../sdk/"
 
-#echo $ANDROID_HOME
+echo $ANDROID_HOME
 
-#sdkmanager --licenses
+sdkmanager --licenses
 
 ./gradlew assembleDebug
 

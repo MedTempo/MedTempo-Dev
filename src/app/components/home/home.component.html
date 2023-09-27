@@ -9,6 +9,8 @@
           </div>
           <h1 class="subtitulo">O REMEDIO deve ser tomado às:</h1>
           <h2 class="titulo">21:00hs</h2>
+
+          <ion-button class="consumido" fill="outline" color="danger" shape="round"> Marcar como Consumido </ion-button>
   
         <ion-item-divider></ion-item-divider>
   
@@ -16,17 +18,22 @@
           <h3 class="paragrafo">(Quarta-feira - 20/06)</h3>
   
         <div class="flex">
-          <ion-card *ngFor="let med of arr_medicamentos; index as i" class="cardRemedio">
+          <ion-card *ngFor="let med of arr_medicamentos; index as i">
             <ion-card-header>
                 {{ i }}
               <ion-card-title class="cardTitulo">{{ med.nome }}</ion-card-title>
-              <ion-card-subtitle class="cardSub">{{ med.horario }}</ion-card-subtitle>
-              <ion-label class="cardSub">{{ med.dosagem }}</ion-label>
+              <!-- Aqui tem que ficar só o horario e o dia da semana do remédio -->
+              <ion-card-subtitle class="cardHorário">{{ med.horario }}</ion-card-subtitle>
+
             </ion-card-header>
-  
-            <ion-button class="cardButton" [routerLink]="'/calendar'"> Saiba mais </ion-button>
+
+            <ion-label class="cardSub">{{ med.dosagem }}</ion-label>
+            
+            <ion-button class="tomar-remedio" fill="clear">Tomar remédio</ion-button>
+
+            <ion-button expand="block" class="cardButton" [routerLink]="'/calendar'">Saiba Mais</ion-button> 
           </ion-card>
-  
+
           </div>
       </ion-content>
-  </ion-app>
+</ion-app>
