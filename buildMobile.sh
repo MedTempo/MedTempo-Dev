@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm -rf www/ android sdk
+#rm -rf www/ android sdk
 
 npx @ionic/cli build;
 
