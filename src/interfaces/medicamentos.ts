@@ -1,5 +1,5 @@
 export default interface medicamentos{
     nome: string,
-    horario: string,
+    horario: Date,
     dosagem: string
 }

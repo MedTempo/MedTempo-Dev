@@ -1,0 +1,28 @@
+{
+    "version": "2.21.0",
+
+    "services": {
+        "frontend": {
+            "build": {
+                "context": ".", 
+                "dockerfile": "Dockerfile",
+                "target": "dev"
+            },
+            "ports": [
+                "7777-7780:4200"
+            ],
+            "networks": ["medtempo_front"],
+
+            "deploy": {
+                "mode": "replicated",
+                "replicas": 3
+            }
+        }
+    },
+
+    "networks": {
+        "medtempo_front": {
+            "driver": "host"
+        }
+    }
+}
