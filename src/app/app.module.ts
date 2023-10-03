@@ -7,8 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 
 import { HttpClientModule } from '@angular/common/http';
-import { CadastroFComponent } from './pages/hybrid/cadastro-f/cadastro-f.component';
-import { CadastroEComponent } from './pages/hybrid/cadastro-e/cadastro-e.component';
+import { CadastroFComponent } from './components/cadastro-f/cadastro-f.component';
+import { CadastroEComponent } from './components/cadastro-e/cadastro-e.component';
 
 
 @NgModule({

@@ -5,8 +5,8 @@ import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroComponent } from './cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { CadastroEModule } from '../cadastro-e/cadastro-e.module';
-import { CadastroFModule } from '../cadastro-f/cadastro-f.module';
+import { CadastroEModule } from '../../../components/cadastro-e/cadastro-e.module';
+import { CadastroFModule } from '../../../components/cadastro-f/cadastro-f.module';
 
 
 @NgModule({
