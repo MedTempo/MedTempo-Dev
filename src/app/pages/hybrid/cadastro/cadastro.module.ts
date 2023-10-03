@@ -5,6 +5,8 @@ import { CadastroRoutingModule } from './cadastro-routing.module';
 import { CadastroComponent } from './cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { CadastroEModule } from '../cadastro-e/cadastro-e.module';
+import { CadastroFModule } from '../cadastro-f/cadastro-f.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { IonicModule } from '@ionic/angular';
     NgFor,
     NgIf,
     FormsModule,
-    IonicModule
+    IonicModule,
+    CadastroEModule,
+    CadastroFModule
   ]
 })
 export class CadastroModule { }

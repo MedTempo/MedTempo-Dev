@@ -14,8 +14,6 @@ import { CadastroEComponent } from './pages/hybrid/cadastro-e/cadastro-e.compone
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroFComponent,
-    CadastroEComponent,
   ],
   imports: [
     BrowserModule,
