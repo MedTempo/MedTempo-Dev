@@ -9,13 +9,13 @@
                 "target": "dev"
             },
             "ports": [
-                "7777-7780:4200"
+                "4200:80"
             ],
-            "networks": ["medtempo_front"],
+            "network_mode": "host",
 
             "deploy": {
                 "mode": "replicated",
-                "replicas": 3
+                "replicas": 1
             }
         }
     },

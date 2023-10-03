@@ -14,7 +14,7 @@ export class HomeComponent {
 
   tommorow: Date = new Date(now.setDate(now.getDate() + 1))
 
-  fivemin: Date = new Date(now.setDate(now.getTime() + 1))
+  fivemin: Date = new Date(now.setDate(now.getMinutes() + 5))
 
   arr_medicamentos: Array<medicamentos> = [
     {
