@@ -14,7 +14,7 @@ export class HomeComponent {
 
   tommorow: Date = new Date(now.setDate(now.getDate() + 1))
 
-  fivemin: Date = new Date(now.setDate(now.getMinutes() + 5))
+  fivemin: Date = new Date(new Date().setMinutes(now.getMinutes() + 1))
 
   arr_medicamentos: Array<medicamentos> = [
     {
@@ -26,7 +26,8 @@ export class HomeComponent {
       nome: `ASPIRINA`,
       horario: this.fivemin,
       dosagem: `1 Comprimido`
-    }
+    },
+
 
   ].sort(function(a,b){
 
