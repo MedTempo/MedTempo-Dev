@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { CadastroEModule } from '../../../components/cadastro-e/cadastro-e.module';
 import { CadastroFModule } from '../../../components/cadastro-f/cadastro-f.module';
+import { CadastroPModule } from 'src/app/components/cadastro-p/cadastro-p.module';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CadastroFModule } from '../../../components/cadastro-f/cadastro-f.modul
     NgIf,
     FormsModule,
     IonicModule,
+    CadastroPModule,
     CadastroEModule,
     CadastroFModule
   ]

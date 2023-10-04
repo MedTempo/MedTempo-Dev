@@ -1,0 +1,86 @@
+<form #event="ngForm" (ngSubmit)="Create(event, 'user-pessoal')">
+    <p class="users">Usuário Pessoal</p>
+    <div class="config-perfil">
+        <ion-item>
+            <ion-input
+            label="Nome completo:"
+            type="text"
+            class="campos"
+            labelPlacement="stacked"
+            [clearInput]="true"
+            placeholder="Ex: Mariana Silva"
+            name="nome"
+            required
+            >
+            </ion-input>
+        </ion-item>
+        
+        <ion-item>
+            <ion-select name="sexo" label-placement="floating" label="Selecione seu Sexo:" required>
+                <ion-select-option [value]="true">Feminino</ion-select-option>
+                <ion-select-option >Masculino</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-input
+                type="email"
+                fill="stacked"
+                label="Email"
+                labelPlacement="stacked"
+                placeholder="Ex: exemplo@exemplo.com"
+                ngModel
+                name="email"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input
+                type="text"
+                fill="stacked"
+                label="Insira sua profissão:"
+                labelPlacement="stacked"
+                placeholder="Ex: Pedagoga"
+                name="local_trabalho"
+                ngModel
+                required
+                name="profissao"
+            ></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input
+                type="password"
+                fill="stacked"
+                label="Insira sua senha"
+                labelPlacement="stacked"
+                value="password"
+                required
+                ngModel
+                name="senha"
+            ></ion-input>
+            <!-- Seria legal um validador dessa senha para ver se corresponde ao requisitos -->
+        </ion-item>
+        
+        <div>
+            <p class="data">Selecione sua data de nascimento:</p>
+        </div>
+        <ion-item>
+            <input type="date" class="data" name="data_nascimento" placeholder="insira data de nascimento"
+            required>
+            <ion-label class="label-idade">XX Anos</ion-label>
+        </ion-item>
+        <!-- Seria legal um calculador de idade automático -->
+        <!-- Idade não pode ser menor que 50 anos para cadastros pessoais -->
+        <div>
+            <ion-item>
+                <ion-textarea label="Faça uma breve descrição da sua saúide:" rows="2" labelPlacement="floating" placeholder=""></ion-textarea>
+            </ion-item>
+        </div>
+
+        <div class="botao">
+            <!-- Alterei o tipo de botão, ficar atento ao type -->
+            <input type="submit" value="Cadastrar Usuário" class="button-cadastrar">
+        </div>
+    </div>
+</form>

@@ -47,7 +47,7 @@ export class CadastroComponent implements OnInit {
 
   public async Create($event: NgForm, url: string){
     console.log(this.usuarios)
-    console.log($event.value)
+    console.log(`O evento é${JSON.stringify($event.value)}`)
 
     this.usr = $event.value
 
