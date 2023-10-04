@@ -3,22 +3,38 @@
     <div class="config-perfil">
         <ion-item>
             <ion-input
-            label="Nome completo:"
+            label="Primeiro Nome:"
             type="text"
             class="campos"
             labelPlacement="stacked"
             [clearInput]="true"
             placeholder="Ex: Mariana Silva"
+            ngModel
             name="nome"
+            required
+            >
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input
+            label="Sobrenome:"
+            type="text"
+            class="campos"
+            labelPlacement="stacked"
+            [clearInput]="true"
+            placeholder="Ex: Mariana Silva"
+            ngModel
+            name="sobrenome"
             required
             >
             </ion-input>
         </ion-item>
         
         <ion-item>
-            <ion-select name="sexo" label-placement="floating" label="Selecione seu Sexo:" required>
+            <ion-select name="sexo" ngModel label-placement="floating" label="Selecione seu Sexo:" required>
                 <ion-select-option [value]="true">Feminino</ion-select-option>
-                <ion-select-option >Masculino</ion-select-option>
+                <ion-select-option [value]="false">Masculino</ion-select-option>
             </ion-select>
         </ion-item>
 
@@ -66,7 +82,7 @@
             <p class="data">Selecione sua data de nascimento:</p>
         </div>
         <ion-item>
-            <input type="date" class="data" name="data_nascimento" placeholder="insira data de nascimento"
+            <input type="date" class="data" name="data_nascimento" placeholder="insira data de nascimento" ngModel name="data_nascimento"
             required>
             <ion-label class="label-idade">XX Anos</ion-label>
         </ion-item>
@@ -74,7 +90,7 @@
         <!-- Idade não pode ser menor que 50 anos para cadastros pessoais -->
         <div>
             <ion-item>
-                <ion-textarea label="Faça uma breve descrição da sua saúide:" rows="2" labelPlacement="floating" placeholder=""></ion-textarea>
+                <ion-textarea label="Faça uma breve descrição da sua saúide:" rows="2" labelPlacement="floating" placeholder="" ngModel name="descricao"></ion-textarea>
             </ion-item>
         </div>
 

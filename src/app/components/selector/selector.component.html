@@ -3,15 +3,15 @@
     <!-- Alterei os tipos de botão para inserir os ícones -->
 
     <div class="tipos-perfil">
-        <ion-button class="usuario" fill="outline" (click)="usr_type = 1">
+        <ion-button [routerLink]="['/cadastro']" [queryParams]="{usr_type: 1}" class="usuario" fill="outline" >
             <ion-icon name="person-outline" color="warning"></ion-icon>
             Perfil Pessoal
         </ion-button>
-        <ion-button class="usuario" fill="outline" (click)="usr_type = 2">
+        <ion-button class="usuario"  [routerLink]="['/cadastro']" [queryParams]="{usr_type: 2}" fill="outline">
             <ion-icon name="bag-add-outline" color="warning"></ion-icon>
             Perfil Especialista
         </ion-button>
-        <ion-button class="usuario" fill="outline" (click)="usr_type = 3">
+        <ion-button class="usuario" fill="outline"  [routerLink]="['/cadastro']" [queryParams]="{usr_type: 3}">
             <ion-icon name="people-outline" color="warning"></ion-icon>
             Perfil Familiar
         </ion-button>

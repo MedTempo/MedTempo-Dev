@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import BackendConnectorService from 'src/app/services/backend-connector/backend-connector.service';
 import { req_user_pessoal, usuario_pessoal } from 'src/interfaces/usuarios';
 
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import usr_type from 'src/interfaces/usr_type';
 
 @Component({
@@ -17,9 +17,9 @@ export class CadastroComponent implements OnInit {
 
   usuarios?: Array<usuario_pessoal>
 
-  usr_type: usr_type = 1
+  usr_type!: usr_type;
 
-  constructor(private back: BackendConnectorService, private router: Router){
+  constructor(private back: BackendConnectorService, private router: Router, private activatedRoute: ActivatedRoute){
     this.usr = {
       "id": "",
       "data_criacao": Date(),
@@ -32,6 +32,10 @@ export class CadastroComponent implements OnInit {
       "sobrenome": ""
   }
 
+    this.activatedRoute.queryParams.subscribe(params => {
+          this.usr_type = params['usr_type'] || 1;
+          console.log(this.usr_type); // Print the parameter to the console. 
+      });
 
   }
 

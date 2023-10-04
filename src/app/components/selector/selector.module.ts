@@ -6,6 +6,7 @@ import { SelectorComponent } from './selector.component';
 import { IonicModule } from '@ionic/angular';
 
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { FormsModule } from '@angular/forms';
     IonicModule,
     NgFor,
     NgIf,
-    FormsModule
+    FormsModule,
+    RouterLink
   ],
   exports: [
     SelectorComponent

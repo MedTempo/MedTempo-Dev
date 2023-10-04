@@ -20,7 +20,8 @@ import { SelectorModule } from '../../../components/selector/selector.module'
     LoginRoutingModule,
     IonicModule,
     FormsModule,
-    SelectorModule
+    SelectorModule,
+    
   ]
 })
 export class LoginModule { }
