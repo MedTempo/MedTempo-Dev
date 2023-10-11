@@ -7,7 +7,7 @@ import { catchError } from 'rxjs';
   providedIn: 'root',
 })
 export default class BackendConnectorService {
-  readonly api_url: string = isDevMode() ? `http://127.0.0.1:7777/` : `https://127.0.0.1:443/`;
+  readonly api_url: string = isDevMode() ? `http://127.0.0.1:7777/` : `https://127.0.0.1:443/api`;
 
   constructor(private http_client: HttpClient) {}
 

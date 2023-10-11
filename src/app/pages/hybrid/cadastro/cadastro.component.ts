@@ -42,9 +42,9 @@ export class CadastroComponent implements OnInit {
   public async ngOnInit() {
     let req = await this.back.getData(`user-pessoal`)
 
-    await req.subscribe((res: any) => {
+   /* await req.subscribe((res: any) => {
       this.usuarios = res.data.usuario_pessoal.values
-    })
+    })/*/
  
   }
 

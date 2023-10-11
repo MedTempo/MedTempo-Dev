@@ -13,3 +13,7 @@ COPY ./www /usr/share/nginx/html
 
 #CMD [ "/bin/bash" ]
 
+
+
+# Run all: npm run build && sudo docker compose -f docker-compose.json build && sudo docker compose -f docker-compose.json up
+
