@@ -26,7 +26,7 @@ export default class BackendConnectorService {
   public async create(usr: usuario_pessoal, complemento: string) {
     const data = await this.http_client.request(
       `POST`,
-      `${this.api_url}${complemento}`,
+      `${this.api_url}/${complemento}`,
       {
         headers: {
           'Content-Type': 'application/json',
