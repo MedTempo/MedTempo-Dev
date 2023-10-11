@@ -15,6 +15,9 @@ export class ClockComponent implements OnInit {
   notify!:boolean
   first_time = true
 
+
+  trigger_warn = new Audio("../../../assets/audio/clock-alarm.mp3")
+
   ngOnInit() {
     this.updateTime();
     setInterval(() => {
@@ -61,9 +64,11 @@ export class ClockComponent implements OnInit {
       new Notification(`É hora do remédio ${this.nextnome} :)`, {
         body: `A dosagem é ${this.nextdosagem}`,
         tag: "medicamentos",
-        image: "",
+        icon: "../../../assets/image/logo.png",
         silent: false
       })
+
+      this.trigger_warn.play()
 
       this.first_time = false
     }
