@@ -40,15 +40,28 @@ export class LoginComponent {
 
 
     if($event.valid){
-      let req = await this.back.login(this.usr, `login`)
+      let req = await this.back.setData(this.usr, `login`)
 
 
       await req.subscribe((res: any)=>{
+
+        let log_out = new Date(new Date().getTime() + (60 * 1000)).toUTCString();
+
+        console.log(log_out)
+
+        if (res.status === 200) {
+          document.cookie = `is_logged = true; max-age = 3600; SameSite=Lax; Secure`
+        }
+
+        console.log(res.headers.keys())
+        console.log(`Cookie is:${res.headers.get("Set-Cookie")}`)
         console.log(res)
       })
   
       console.log(req)
-      //this.router.navigate([`/app`])
+
+
+      this.router.navigate([`/app`])
     }
     else{
       alert(`formulario não é valido`)

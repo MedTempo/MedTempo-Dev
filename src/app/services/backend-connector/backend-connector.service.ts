@@ -15,10 +15,32 @@ export default class BackendConnectorService {
   public async getData(complemento: string) {
     const data = await this.http_client.request(`GET`, `${this.api_url}${complemento}`, {
       responseType: `json`,
-      withCredentials: true
+      withCredentials: true,
+      observe: "response"
     });
 
-    //console.log(data)
+    console.log(data)
+
+    return data;
+  }
+
+  public async setData(usr: any, complemento: string) {
+    const data = await this.http_client.request(
+      `POST`,
+      `${this.api_url}${complemento}`,
+      {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+
+        body: usr,
+        withCredentials: true,
+        observe: "response"
+
+      }
+    )
+
+      console.log(data)
 
     return data;
   }
@@ -42,26 +64,8 @@ export default class BackendConnectorService {
     return data;
   }
 
-  public async login(usr: usuario_pessoal, complemento: string) {
-    const data = await this.http_client.request(
-      `POST`,
-      `${this.api_url}${complemento}`,
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
 
-        body: usr,
-        withCredentials: true
-
-      }
-    )
-
-      console.log(data)
-
-    return data;
-  }
-
+/*
   public async deleteUser(usr: usuario_pessoal){
     const data = await this.http_client.request(
       `DELETE`,
@@ -74,5 +78,5 @@ export default class BackendConnectorService {
         body: usr
       }
     )
-  }
+  }*/
 }

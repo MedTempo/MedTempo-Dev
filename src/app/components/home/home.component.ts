@@ -16,6 +16,11 @@ export class HomeComponent {
 
   fivemin: Date = new Date(new Date().setMinutes(now.getMinutes() + 1))
 
+  constructor(){
+    console.log("cookie begin")
+    console.log(document.cookie)
+  }
+
   arr_medicamentos: Array<medicamentos> = [
     {
       nome: `LOSARTRANA`,
