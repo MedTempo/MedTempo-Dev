@@ -15,7 +15,7 @@
         <ion-item-divider></ion-item-divider>
   
           <h1 class="titulo">Medicamentos do dia</h1>
-          <h3 class="paragrafo">(Quarta-feira - 20/06)</h3>
+          <h3 class="paragrafo">{{ arr_medicamentos[0].horario }}</h3>
   
         <div *ngIf="arr_medicamentos.length != 0" class="flex">
           <ion-card *ngFor="let med of arr_medicamentos; index as i">

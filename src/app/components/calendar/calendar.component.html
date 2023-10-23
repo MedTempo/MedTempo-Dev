@@ -1,4 +1,25 @@
-<ion-content [fullscreen]="true">
+<ion-content>
     <mdt-navbar></mdt-navbar>
-    <ion-datetime locale="es-ES"></ion-datetime>
+
+    <div class="calendar">
+      <ion-datetime locale="en-GB-u-hc-h12"></ion-datetime>
+  </div>
+
+  <h1 class="titulo">Medicamentos do dia</h1>
+          <h3 class="paragrafo">{{ arr_medicamentos[0].horario }}</h3>
+  
+        <div *ngIf="arr_medicamentos.length != 0" class="flex">
+          <ion-card *ngFor="let med of arr_medicamentos; index as i">
+            <ion-card-header>
+                {{ i }}
+              <ion-card-title class="cardTitulo">{{ med.nome }}</ion-card-title>
+              <!-- Aqui tem que ficar só o horario e o dia da semana do remédio -->
+              <ion-card-subtitle class="cardHorário ion-text-center">{{ med.horario }}</ion-card-subtitle>
+
+            </ion-card-header>
+
+            <ion-label class="cardSub">{{ med.dosagem }}</ion-label>
+          </ion-card>
+
+          </div>
   </ion-content>

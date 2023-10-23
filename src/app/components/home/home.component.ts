@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-
-
 import type medicamentos from 'src/interfaces/medicamentos';
 
 let now: Date = new Date()
