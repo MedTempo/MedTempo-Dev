@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './tabs.component';
+import { IsLoggedIn } from 'src/app/services/router_guards/isLoggedIn/is-logged-in.service';
 
 const routes: Routes = [
   {
     path: '',
     component: TabsComponent,
+    canActivateChild: [
+      IsLoggedIn
+    ],
     children: [
       {
         path: ``,
         redirectTo: `home`,
         pathMatch: 'full',
+        canActivate: [
+          IsLoggedIn
+        ]
       },
       {
         path: `home`,
@@ -23,6 +30,9 @@ const routes: Routes = [
 
           return HomeModule;
         },
+        canActivate: [
+          IsLoggedIn
+        ]
       },
       {
         path: `calendar`,

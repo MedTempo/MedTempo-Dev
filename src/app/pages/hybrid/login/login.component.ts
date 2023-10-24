@@ -61,7 +61,7 @@ export class LoginComponent {
       console.log(req)
 
 
-      this.router.navigate([`/app`])
+      this.router.navigateByUrl("/app")
     }
     else{
       alert(`formulario não é valido`)
