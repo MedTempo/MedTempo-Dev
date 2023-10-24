@@ -1,9 +1,11 @@
 <div>
   <h1 class="titulo ion-text-center ion-margin">Próximo Remédio em:</h1>  
 
-  <div class="clock-container">
+  <div [class]="'clock-container ' + (is_delayed == true ? 'clock-red' : '')">
     <div class="clock-text">{{ currentTime }}</div>
     <h2 class="subtitulo">{{ nextnome }}</h2>
+
+    <p *ngIf="is_delayed == true">O medicamento está atrasado</p>
   </div>
 
 

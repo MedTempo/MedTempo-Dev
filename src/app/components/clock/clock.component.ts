@@ -15,6 +15,7 @@ export class ClockComponent implements OnInit {
   notify!:boolean
   first_time = true
 
+  is_delayed = false
 
   trigger_warn = new Audio("../../../assets/audio/clock-alarm.mp3")
 
@@ -39,23 +40,36 @@ export class ClockComponent implements OnInit {
 
   updateTime() {
     const now = new Date();
-    const diff = this.nextmed?.getTime() - new Date().getTime()
+    let diff = this.nextmed?.getTime() - new Date().getTime()
   
     const date = new Date(Date.now() + diff)
 
-   // console.log(date)
+   console.log(diff)
 
-    const hours = Math.floor(diff / (1000 * 60 * 60 ));
-    const minutes = Math.floor(diff % (1000 * 60 * 60 * 24)) / (1000 * 60);
-    const seconds = Math.floor(diff % (1000 * 60)) / 1000;
+   if (diff < 0) {
+      diff = Math.abs(diff)
+      this.is_delayed = true
+   }
+
+    let hours = Math.floor(diff / (1000 * 60 * 60 ));
+    let minutes = Math.floor(diff % (1000 * 60 * 60 * 24)) / (1000 * 60);
+    let seconds = Math.floor(diff % (1000 * 60)) / 1000;
     //const miliseconds = String(date.getMilliseconds()).padStart(2, '0');
   
- //   console.log(`h:${hours} m:${minutes} s:${seconds}`)
+   //console.log(`h:${hours} m:${minutes} s:${seconds}`)
+/*
+    if(seconds < 0 && minutes < 0) {
+      hours = Math.abs(hours)
+      minutes = Math.abs(minutes)
+      seconds = Math.abs(seconds)
 
+      this.is_delayed = true
+    }
+*/
     const str_time = {
       h: String(hours).padStart(2, '0'),
       m:  String(minutes).slice(0,1).padStart(2, '0'),
-      s: String(seconds).slice(0,2).padStart(2, '0'),
+      s: String(seconds).padStart(2, '0').slice(0,2),
     }
 
     this.currentTime = `${str_time.h}:${str_time.m}:${str_time.s}`;

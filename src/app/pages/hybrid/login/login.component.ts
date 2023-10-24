@@ -51,6 +51,7 @@ export class LoginComponent {
 
         if (res.status === 200) {
           document.cookie = `is_logged = true; max-age = 3600; SameSite=Lax; Secure`
+          this.router.navigate(["/app"])
         }
 
         console.log(res.headers.keys())
@@ -59,9 +60,6 @@ export class LoginComponent {
       })
   
       console.log(req)
-
-
-      this.router.navigateByUrl("/app")
     }
     else{
       alert(`formulario não é valido`)
