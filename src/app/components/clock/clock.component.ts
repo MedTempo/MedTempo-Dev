@@ -44,7 +44,7 @@ export class ClockComponent implements OnInit {
   
     const date = new Date(Date.now() + diff)
 
-   console.log(diff)
+   //console.log(diff)
 
    if (diff < 0) {
       diff = Math.abs(diff)
