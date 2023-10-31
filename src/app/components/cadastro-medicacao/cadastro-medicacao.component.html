@@ -1,66 +1,72 @@
-<div>
-    <p class="users">Cadastro de Medicação</p>
-
-    <div>
+<ion-button id="open-modal" expand="block">Open</ion-button>
+<ion-modal trigger="open-modal">
+    <ng-template>
         <div>
-            <ion-input name="email" type="email" label="Email:" label-placement="floating"placeholder="Insira o seu email"
-                 ngModel required>
-            </ion-input>
-        <ion-item>
-            <ion-input label="Nome do Medicamento" type="text" labelPlacement="stacked"
-                [clearInput]="true" placeholder="Ex: Paracetamol" name="nome" ngModel required>
-            </ion-input>
-        </ion-item>
+            <p class="users">Cadastro de Medicação</p>
 
-        <ion-item>
-            <ion-input label="Descrição Medicação" type="text" labelPlacement="stacked" [clearInput]="true"
-                placeholder="Ex: Tratar a febre e a dor leve e moderada" ngModel name="descricao" required>
-            </ion-input>
-        </ion-item>
+            <div>
+                <div>
+                    <ion-input name="email" type="email" label="Email:" label-placement="floating"
+                        placeholder="Insira o seu email" ngModel required>
+                    </ion-input>
+                    <ion-item>
+                        <ion-input label="Nome do Medicamento" type="text" labelPlacement="stacked" [clearInput]="true"
+                            placeholder="Ex: Paracetamol" name="nome" ngModel required>
+                        </ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Uso Medicação" labelPlacement="stacked"
-                placeholder="Ex: 12 hrs" name="intervalo_uso" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input label="Descrição Medicação" type="text" labelPlacement="stacked" [clearInput]="true"
+                            placeholder="Ex: Tratar a febre e a dor leve e moderada" ngModel name="descricao" required>
+                        </ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="date" fill="stacked" label="Tempo de uso" labelPlacement="stacked"
-                placeholder="Ex: 5 dias" name="tempo_uso" ngModel
-                required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Uso Medicação" labelPlacement="stacked"
+                            placeholder="Ex: 12 hrs" name="intervalo_uso" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Metodo de uso" name="metodo_uso" labelPlacement="stacked"
-                placeholder="Ex: 100 ml" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="date" fill="stacked" label="Tempo de uso" labelPlacement="stacked"
+                            placeholder="Ex: 5 dias" name="tempo_uso" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Dosagem" name="dosagem" labelPlacement="stacked"
-                placeholder="Ex: Via Oral" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Metodo de uso" name="metodo_uso"
+                            labelPlacement="stacked" placeholder="Ex: 100 ml" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Reações Adversas" name="reacoes_adversas" labelPlacement="stacked"
-                placeholder="Ex: Enxaqueca" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Dosagem" name="dosagem" labelPlacement="stacked"
+                            placeholder="Ex: Via Oral" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Contra Indicação" name="contra_indicacao" labelPlacement="stacked"
-                placeholder="Ex: Crianças" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Reações Adversas" name="reacoes_adversas"
+                            labelPlacement="stacked" placeholder="Ex: Enxaqueca" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <ion-input type="text" fill="stacked" label="Orientação" name="orientacao" labelPlacement="stacked"
-                placeholder="Ex: A medicação deve ser realizada depois do almoço" ngModel required></ion-input>
-        </ion-item>
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Contra Indicação" name="contra_indicacao"
+                            labelPlacement="stacked" placeholder="Ex: Crianças" ngModel required></ion-input>
+                    </ion-item>
 
-        <ion-item>
-            <input ngModel type="date" name="data_criacao" placeholder="Criada dia:" required>
-        </ion-item>
-    
-        <div>
-            <input type="submit" value="Cadastrar Medicação">
+                    <ion-item>
+                        <ion-input type="text" fill="stacked" label="Orientação" name="orientacao"
+                            labelPlacement="stacked" placeholder="Ex: A medicação deve ser realizada depois do almoço"
+                            ngModel required></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <input ngModel type="date" name="data_criacao" placeholder="Criada dia:" required>
+                    </ion-item>
+
+                    <div>
+                        <input type="submit" value="Cadastrar Medicação">
+                    </div>
+                </div>
+
+            </div>
         </div>
-    </div>
-
-</div>
+    </ng-template>
+</ion-modal>

@@ -14,7 +14,7 @@ import { SingleTabModule } from '../../../components/single-tab/single-tab.modul
     CommonModule,
     TabsRoutingModule,
     IonicModule,
-    SingleTabModule
+    SingleTabModule,
   ],
   exports:[
     TabsComponent
