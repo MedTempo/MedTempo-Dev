@@ -70,7 +70,22 @@ const routes: Routes = [
 
           return PerfilModule;
         },
+        
       },
+      {
+        path: 'cadastro-medicacao',
+        loadChildren: async function () {
+          let { CadastroMedicacaoModule } = await import(
+            '../../../components/cadastro-medicacao/cadastro-medicacao.module'
+          );
+    
+          console.log(CadastroMedicacaoModule);
+    
+          return CadastroMedicacaoModule;
+        },
+        pathMatch: `full`,
+      },
+      
 
     ],
   },

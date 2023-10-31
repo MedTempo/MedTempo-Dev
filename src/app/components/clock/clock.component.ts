@@ -8,9 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ClockComponent implements OnInit {
   public currentTime: string = '';
 
-  @Input() nextmed!: Date;
-  @Input() nextnome!: string;
-  @Input() nextdosagem!: string;
+  @Input() nextmed?: Date;
+  @Input() nextnome?: string;
+  @Input() nextdosagem?: string;
 
   notify!:boolean
   first_time = true
@@ -39,6 +39,12 @@ export class ClockComponent implements OnInit {
   }
 
   updateTime() {
+
+    if (this.nextmed == undefined) {
+      this.currentTime = `--:--:--`
+      return
+    }
+
     const now = new Date();
     let diff = this.nextmed?.getTime() - new Date().getTime()
   

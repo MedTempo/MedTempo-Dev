@@ -142,3 +142,8 @@ www
 
 *.pem
 *.crt
+
+
+*.zip 
+
+*.tar.gz

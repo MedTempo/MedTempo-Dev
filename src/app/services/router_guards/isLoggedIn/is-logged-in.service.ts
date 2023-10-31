@@ -1,6 +1,7 @@
 import { inject, isDevMode } from "@angular/core"
 import { Router } from "@angular/router";
 
+import { getCookie } from "src/app/libs/cookies-lib";
 
 function redirectToLogin(){
   const router = inject(Router)
@@ -35,18 +36,3 @@ export function IsLoggedIn(): boolean{
 
 /* */
 
-function getCookie(cname: string) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }

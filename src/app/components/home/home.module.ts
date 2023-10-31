@@ -11,7 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { ClockComponent } from '../clock/clock.component';
 import { ClockModule } from '../clock/clock.module';
-import { CadastroMedicacaoModule } from '../cadastro-medicacao/cadastro-medicacao.module';
+//import { CadastroMedicacaoModule } from '../cadastro-medicacao/cadastro-medicacao.module';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import { CadastroMedicacaoModule } from '../cadastro-medicacao/cadastro-medicaca
     NgIf,
     ClockModule,
 
-    CadastroMedicacaoModule,
+    //CadastroMedicacaoModule,
   ]
 })
 export class HomeModule { }

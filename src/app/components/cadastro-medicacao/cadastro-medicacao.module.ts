@@ -18,9 +18,9 @@ import { FormsModule } from '@angular/forms';
     CadastroMedicacaoRoutingModule,
     NavbarModule,
     FormsModule
-  ],
+  ],/*
   exports: [
     CadastroMedicacaoComponent
-  ]
+  ]*/
 })
 export class CadastroMedicacaoModule { }

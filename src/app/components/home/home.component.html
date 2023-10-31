@@ -5,29 +5,29 @@
           <h2 class="subtitulo">José Filho da Silva </h2>
           <h3 class="paragrafo">Fique sempre atento(a) aos seus medicamentos</h3>
           <div class="container-clock">
-            <app-clock [nextmed]="arr_medicamentos[0].horario" [nextnome]="arr_medicamentos[0].nome" [nextdosagem]="arr_medicamentos[0].dosagem"/>
+            <app-clock [nextmed]="arr_medicamentos[0]?.horario" [nextnome]="arr_medicamentos[0]?.nome" [nextdosagem]="arr_medicamentos[0]?.dosagem"/>
           </div>
           <h1 class="subtitulo">O próximo REMEDIO deve ser tomado às:</h1>
-          <h2 class="titulo">{{ arr_medicamentos[0].horario }}</h2>
+          <h2 class="titulo">{{ arr_medicamentos[0]?.horario }}</h2>
 
           <ion-button class="consumido" fill="outline" color="danger" shape="round"> Marcar como Consumido </ion-button>
   
         <ion-item-divider></ion-item-divider>
   
           <h1 class="titulo">Medicamentos do dia</h1>
-          <h3 class="paragrafo">{{ arr_medicamentos[0].horario }}</h3>
+          <h3 class="paragrafo">{{ arr_medicamentos[0]?.horario }}</h3>
   
         <div *ngIf="arr_medicamentos.length != 0" class="flex">
           <ion-card *ngFor="let med of arr_medicamentos; index as i">
             <ion-card-header>
                 {{ i }}
-              <ion-card-title class="cardTitulo">{{ med.nome }}</ion-card-title>
+              <ion-card-title class="cardTitulo">{{ med?.nome }}</ion-card-title>
               <!-- Aqui tem que ficar só o horario e o dia da semana do remédio -->
-              <ion-card-subtitle class="cardHorário ion-text-center">{{ med.horario }}</ion-card-subtitle>
+              <ion-card-subtitle class="cardHorário ion-text-center">{{ med?.horario }}</ion-card-subtitle>
 
             </ion-card-header>
 
-            <ion-label class="cardSub">{{ med.dosagem }}</ion-label>
+            <ion-label class="cardSub">{{ med?.dosagem }}</ion-label>
             
             <ion-button class="tomar-remedio" fill="clear">Tomar remédio</ion-button>
 
@@ -42,7 +42,6 @@
             Carregando Medicamentos
           </div>
 
-          <app-cadastro-medicacao></app-cadastro-medicacao>
           </div>
       </ion-content>
 </ion-app>

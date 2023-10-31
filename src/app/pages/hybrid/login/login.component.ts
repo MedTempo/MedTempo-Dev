@@ -51,6 +51,8 @@ export class LoginComponent {
 
         if (res.status === 200) {
           document.cookie = `is_logged = true; max-age = 3600; SameSite=Lax; Secure`
+          document.cookie = `usr_type = ${$event.value.user_type}; max-age = 3600; SameSite=Lax; Secure`
+
           this.router.navigate(["/app"])
         }
 
