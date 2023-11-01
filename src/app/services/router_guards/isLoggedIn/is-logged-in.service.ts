@@ -11,11 +11,11 @@ function redirectToLogin(){
 
 
 export function IsLoggedIn(): boolean{
-/*
+
   if(isDevMode() === true){
     return true
   }
-*/
+
   let cookie_value = getCookie("is_logged")
 
   console.log(`ck value ${cookie_value}`)
