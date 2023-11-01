@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsComponent } from './tabs.component';
-import { CanUseDashboard, IsLoggedIn } from 'src/app/services/router_guards/isLoggedIn/is-logged-in.service';
+import { IsLoggedIn } from 'src/app/services/router_guards/isLoggedIn/is-logged-in.service';
 
 const routes: Routes = [
   {
@@ -15,6 +15,9 @@ const routes: Routes = [
         path: ``,
         redirectTo: `home`,
         pathMatch: 'full',
+        canActivate: [
+          IsLoggedIn
+        ]
       },
       {
         path: `home`,
@@ -28,7 +31,7 @@ const routes: Routes = [
           return HomeModule;
         },
         canActivate: [
-          CanUseDashboard
+          IsLoggedIn
         ]
       },
       {

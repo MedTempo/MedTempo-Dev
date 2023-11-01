@@ -9,29 +9,27 @@ function redirectToLogin(){
   router.navigate([`/login`])
 }
 
-function redirectToApp(){
-  const router = inject(Router)
 
-  router.navigate([`/app`])
-}
+export function IsLoggedIn(): boolean{
+/*
+  if(isDevMode() === true){
+    return true
+  }
+*/
+  let cookie_value = getCookie("is_logged")
 
-export function IsLoggedIn(): boolean {
-  if (getCookie("is_logged") == "true") {
+  console.log(`ck value ${cookie_value}`)
+
+  if (cookie_value == "true") {
     return true
   }
   else {
+    console.log("teste...")
+    redirectToLogin()
     return false
   }
+  
 
-}
-
-
-export function CanUseDashboard(){
-  IsLoggedIn() == true ? true : redirectToLogin()
-}
-
-export function IsAlreadyLoggedIn(){
-  IsLoggedIn() == true ? true : redirectToApp
 }
 
 
