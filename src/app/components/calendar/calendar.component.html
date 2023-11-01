@@ -3,10 +3,12 @@
 
     <div class="calendar">
       <ion-datetime locale="en-GB-u-hc-h12"></ion-datetime>
-  </div>
+    </div>
+
+    <ion-item></ion-item>
 
   <h1 class="titulo">Medicamentos do dia</h1>
-          <h3 class="paragrafo">{{ arr_medicamentos[0].horario }}</h3>
+        <h3 class="paragrafo">{{ arr_medicamentos[0].horario }}</h3>
   
         <div *ngIf="arr_medicamentos.length != 0" class="flex">
           <ion-card *ngFor="let med of arr_medicamentos; index as i">

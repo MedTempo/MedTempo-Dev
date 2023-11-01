@@ -3,12 +3,23 @@
     <ng-template>-->
         <div class="ion-margin">
             <p class="users">Cadastro de Medicação</p>
+            <!--adicionar nomes do pacientes já cadastrados-->
+            <ion-item>
+                <ion-select label="Selecione o paciente" label-placement="stacked">
+                  <ion-select-option value="apple">Nome do paciente 1</ion-select-option>
+                  <ion-select-option value="banana">Nome do paciente 2</ion-select-option>
+                  <ion-select-option value="orange">Nome do paciente 3</ion-select-option>
+                </ion-select>
+            </ion-item>
 
             <div>
                 <form>
+                    <!--
                     <ion-input name="email" type="email" label="Email:" label-placement="floating"
                         placeholder="Insira o seu email" ngModel required>
                     </ion-input>
+                    -->
+
                     <ion-item>
                         <ion-input label="Nome do Medicamento" type="text" labelPlacement="stacked" [clearInput]="true"
                             placeholder="Ex: Paracetamol" name="nome" ngModel required>
