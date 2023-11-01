@@ -15,9 +15,6 @@ const routes: Routes = [
         path: ``,
         redirectTo: `home`,
         pathMatch: 'full',
-        canActivate: [
-          IsLoggedIn
-        ]
       },
       {
         path: `home`,
