@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppModule } from './app.module';
 
 import { IsNotMobileService } from './services/router_guards/isPlataform/is-plataform.service';
-import { IsLoggedIn } from './services/router_guards/isLoggedIn/is-logged-in.service';
+import { IsAlreadyLoggedIn, IsLoggedIn } from './services/router_guards/isLoggedIn/is-logged-in.service';
 
 /*
 const routes: Routes = [
@@ -100,6 +100,9 @@ const routes: Routes = [
       return LoginModule;
     },
     pathMatch: `full`,
+    canActivate: [
+      IsAlreadyLoggedIn
+    ]
   },
   {
     path: `**`,
