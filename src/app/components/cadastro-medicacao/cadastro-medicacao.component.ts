@@ -27,7 +27,7 @@ export class CadastroMedicacaoComponent {
 
 
     if($event.valid){
-      let req = await this.back.setData(this.usr, `medicamentos`)
+      let req = await this.back.setData(this.usr, `medicine`)
 
 
       await req.subscribe((res: any)=>{
