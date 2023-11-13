@@ -147,3 +147,5 @@ www
 *.zip 
 
 *.tar.gz
+
+*.sh
